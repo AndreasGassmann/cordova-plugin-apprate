@@ -35,20 +35,20 @@ Locale = (function () {
 
 })();
 
-Locales = (function() {
+Locales = (function () {
   var LOCALE_DEFAULT, locales;
 
-  function Locales() {}
+  function Locales() { }
 
   LOCALE_DEFAULT = 'en';
 
   locales = {};
 
-  Locales.addLocale = function(localeObject) {
+  Locales.addLocale = function (localeObject) {
     return locales[localeObject.language] = localeObject;
   };
 
-  Locales.getLocale = function(language, applicationTitle, customLocale) {
+  Locales.getLocale = function (language, applicationTitle, customLocale) {
     var localeObject;
     if (applicationTitle == null) {
       applicationTitle = '';
@@ -132,20 +132,32 @@ Locales.addLocale(new Locale({
 
 Locales.addLocale(new Locale({
   language: 'de',
-  title: "Bewerte %@",
-  message: "Wenn dir %@ gefällt, würdest Du es bitte bewerten? Dies wird nicht länger als eine Minute dauern. Danke für die Unterstützung!",
+  title: "Möchtest Du %@ bewerten?",
+  message: "Es dauert nicht länger als eine Minute und hilft, unsere App zu verbreiten. Danke für deine Unterstützung!",
   cancelButtonLabel: "Nein, danke",
   laterButtonLabel: "Später erinnern",
-  rateButtonLabel: "Jetzt bewerten"
+  rateButtonLabel: "Jetzt bewerten",
+  yesButtonLabel: "Ja!",
+  noButtonLabel: "Nicht wirklich",
+  appRatePromptTitle: 'Gefällt dir %@',
+  feedbackPromptTitle: 'Was dagegen, uns Feedback zu geben?',
+  appRatePromptMessage: '',
+  feedbackPromptMessage: ''
 }));
 
 Locales.addLocale(new Locale({
   language: 'de-AT',
-  title: "Bewerte %@",
-  message: "Wenn dir %@ gefällt, würdest Du es bitte bewerten? Dies wird nicht länger als eine Minute dauern.\nDanke für die Unterstützung!",
+  title: "Möchtest Du %@ bewerten?",
+  message: "Es dauert nicht länger als eine Minute und hilft, unsere App zu verbreiten. Danke für deine Unterstützung!",
   cancelButtonLabel: "Nein, danke",
   laterButtonLabel: "Später erinnern",
-  rateButtonLabel: "Jetzt bewerten"
+  rateButtonLabel: "Jetzt bewerten",
+  yesButtonLabel: "Ja!",
+  noButtonLabel: "Nicht wirklich",
+  appRatePromptTitle: 'Gefällt dir %@',
+  feedbackPromptTitle: 'Was dagegen, uns Feedback zu geben?',
+  appRatePromptMessage: '',
+  feedbackPromptMessage: ''
 }));
 
 Locales.addLocale(new Locale({
@@ -168,17 +180,23 @@ Locales.addLocale(new Locale({
   noButtonLabel: "Not really",
   appRatePromptTitle: 'Do you like using %@',
   feedbackPromptTitle: 'Mind giving us some feedback?',
-  appRatePromptMessage:'',
-  feedbackPromptMessage:''
+  appRatePromptMessage: '',
+  feedbackPromptMessage: ''
 }));
 
 Locales.addLocale(new Locale({
   language: 'es',
-  title: "Reseña %@",
-  message: "Si te gusta %@, ¿podrías escribirnos una reseña? No te tomará más de un minuto. ¡Gracias por tu apoyo!",
+  title: "¿Quieres puntuar %@?",
+  message: "No tardará más de un minuto y ayuda a promocionar nuestra aplicación. Gracias por tu apoyo!",
   cancelButtonLabel: "No, gracias",
   laterButtonLabel: "Recordarme más tarde",
-  rateButtonLabel: "Escribir reseña ahora"
+  rateButtonLabel: "Escribir reseña ahora",
+  yesButtonLabel: "Sí!",
+  noButtonLabel: "En realidad no",
+  appRatePromptTitle: '¿Te gusta usar %@?',
+  feedbackPromptTitle: '¿Te importaría darnos tu opinión?',
+  appRatePromptMessage: '',
+  feedbackPromptMessage: ''
 }));
 
 Locales.addLocale(new Locale({
@@ -201,11 +219,17 @@ Locales.addLocale(new Locale({
 
 Locales.addLocale(new Locale({
   language: 'fr',
-  title: "Notez %@",
-  message: "Si vous aimez utiliser %@, n’oubliez pas de voter sur l’App Store. Cela ne prend qu’une minute. Merci d’avance pour votre soutien !",
+  title: "Ça te dérangerait d'évaluer %@ ?",
+  message: "Cela ne prendra pas plus d'une minute et aide à promouvoir notre application. Merci pour ton soutien !",
   cancelButtonLabel: "Non, merci",
   laterButtonLabel: "Me le rappeler ultérieurement",
-  rateButtonLabel: "Votez maintenant"
+  rateButtonLabel: "Évalue-le maintenant",
+  yesButtonLabel: "Oui!",
+  noButtonLabel: "Pas vraiment",
+  appRatePromptTitle: 'Aimes-tu utiliser %@ ?',
+  feedbackPromptTitle: 'Cela te dérange de nous donner un peu de feedback ?',
+  appRatePromptMessage: '',
+  feedbackPromptMessage: ''
 }));
 
 Locales.addLocale(new Locale({
@@ -237,11 +261,17 @@ Locales.addLocale(new Locale({
 
 Locales.addLocale(new Locale({
   language: 'it',
-  title: "Valuta %@",
-  message: "Ti piace %@? Puoi dare il tuo voto nello store. Ti basterà un minuto! Grazie!",
+  title: "Ti dispiacerebbe valutare %@?",
+  message: "Non ci vorrà più di un minuto e aiuta a promuovere la nostra applicazione. Grazie per il tuo sostegno!",
   cancelButtonLabel: "No, grazie",
   laterButtonLabel: "Più tardi",
-  rateButtonLabel: "Valuta ora"
+  rateButtonLabel: "Valuta ora",
+  yesButtonLabel: "Sì!",
+  noButtonLabel: "Non proprio",
+  appRatePromptTitle: 'Ti piace usare %@?',
+  feedbackPromptTitle: 'Ti dispiace darci un feedback?',
+  appRatePromptMessage: '',
+  feedbackPromptMessage: ''
 }));
 
 Locales.addLocale(new Locale({
@@ -264,11 +294,17 @@ Locales.addLocale(new Locale({
 
 Locales.addLocale(new Locale({
   language: 'nl',
-  title: "Beoordeel %@",
-  message: "Als het gebruik van %@ je bevalt, wil je dan een moment nemen om het te beoordelen? Het duurt nog geen minuut. Bedankt voor je steun!",
+  title: "Zou u zitting hebben in het beoordelen van %@?",
+  message: "Het duurt niet langer dan een minuut en helpt om onze app te promoten. Bedankt voor uw steun!",
   cancelButtonLabel: "Nee, bedankt",
   laterButtonLabel: "Herinner me er later aan",
-  rateButtonLabel: "Beoordeel nu"
+  rateButtonLabel: "Beoordeel nu",
+  yesButtonLabel: "Ja!",
+  noButtonLabel: "Niet echt",
+  appRatePromptTitle: 'Hou u van het gebruik van %@?',
+  feedbackPromptTitle: 'Weet u ons wat feedback te geven?',
+  appRatePromptMessage: '',
+  feedbackPromptMessage: ''
 }));
 
 Locales.addLocale(new Locale({
